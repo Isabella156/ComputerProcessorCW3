@@ -1,0 +1,23 @@
+// Usage:RAM[0] = RAM[1] XOR RAM[RAM[2]]
+@1
+D=M
+@2
+A=M
+D=M
+D=!D
+@1
+D=D&M
+@3
+M=D
+@2
+A=M
+D=M
+@1
+M=!M
+D=D&M
+@3
+D=D|M
+@0
+M=D
+@20
+0;JMP
